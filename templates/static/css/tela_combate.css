@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MedievalSharp', cursive;
+}
+
+body {
+    background-image: url('epic-battle-background.jpg');
+    background-size: cover;
+    color: #fff;
+    padding-top: 60px; /* Ajuste para não sobrepor o conteúdo pela navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o conteúdo sempre ocupe a altura total da tela */
+}
+
+.combat-container {
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8); /* Ajuste na transparência para maior contraste */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+}
+
+.combat-view {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.combatant {
+    position: relative;
+    width: 20%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.combatant img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+.status-bar {
+    width: 100%;
+    height: 20px;
+    background: grey;
+    margin-top: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.status-fill {
+    height: 100%;
+    background-color: red; /* Vermelho para vida, azul para mana */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease-in-out;
+}
+
+.hero-mana .status-fill, .enemy-mana .status-fill {
+    background-color: blue; /* Azul para representar mana */
+}
+
+.command-panel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que os botões se ajustem em várias linhas se necessário */
+    width: 100%;
+    margin-top: 10px;
+}
+
+.command {
+    padding: 8px 16px;
+    font-size: 1em;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.command:hover {
+    background-color: #A0522D;
+    transform: translateY(-2px);
+}
+
+
+.class-info {
+    background: rgba(255, 255, 255, 0.1); /* Fundo para informações da classe */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -5px;
+}
+
+.attributes {
+    list-style-type: none;
+    padding: 5px;
+    font-size: 0.85em;
+}
+
+.attributes li {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.1); 
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Sombra para um efeito de profundidade */
+    display: flex;
+    justify-content: center; /* Centraliza os elementos da navbar horizontalmente */
+    align-items: center; /* Centraliza os elementos da navbar verticalmente */
+    padding: 30px 0; /* Espaçamento vertical para a navbar */
+}
+
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+    margin: 12px 38px; /* Espaçamento horizontal entre os links */
+}
+
+.navbar a:hover {
+    transform: scale(1.05);
+}
+
+
+
+ 

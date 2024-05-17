@@ -1,0 +1,105 @@
+/* Fonte medieval */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MedievalSharp', cursive; /* Fonte medieval para todo o texto */
+}
+
+/* Estilo global */
+body {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000; /* Sombra no texto para destacá-lo */
+}
+
+.registration-box {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px; /* Largura ajustada */
+    box-shadow: 0px 0px 10px 0px black;
+    color: #fff;
+    text-align: center;
+}
+
+/* Estilizando o formulário dentro da caixa */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinhamento dos elementos do formulário */
+}
+
+/* Estilizando os inputs */
+input, label {
+    width: 100%; /* Largura total dentro do container */
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 90%;
+    list-style: none;
+}
+
+label {
+    align-self: flex-start; /* Alinhar os rótulos à esquerda */
+    
+    font-size: 1.1em;
+}
+
+/* Estilizando o botão de submit */
+button {
+    background-color: #8B4513;
+    color: white;
+    padding: 10px;
+    margin-top: 20px; /* Espaçamento acima do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Botão ocupa toda a largura */
+}
+
+button:hover {
+    background-color: #A0522D;
+    transform: translateY(-2px);
+}

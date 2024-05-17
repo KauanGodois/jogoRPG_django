@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja do Jogo - RPG Medieval</title>
+    <link rel="stylesheet" href="tela_loja.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="shop-container">
+        <h1>Loja Medieval</h1>
+        <div class="categories">
+            <button class="category-button" onclick="filterItems('all')">Todos</button>
+            <button class="category-button" onclick="filterItems('weapons')">Armas</button>
+            <button class="category-button" onclick="filterItems('armor')">Armaduras</button>
+            <button class="category-button" onclick="filterItems('potions')">Poções</button>
+        </div>
+        <div class="item-list">
+            <!-- Itens dinâmicos -->
+        </div>
+        <div class="cart">
+            <h2>Sua Cesta</h2>
+            <ul id="cart-items">
+                <!-- Itens do carrinho -->
+            </ul>
+            <button class="checkout-button">Finalizar Compra</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = [
+                { id: 1, name: "Espada Longa", description: "Uma espada afiada, ideal para combate.", price: 150, image: "espada-longa.jpg" },
+                { id: 2, name: "Poção de Cura", description: "Cura 50 pontos de vida.", price: 50, image: "pocao-cura.jpg" },
+                { id: 3, name: "Armadura de Couro", description: "Proteção leve e ágil.", price: 200, image: "armadura-couro.jpg" }
+            ];
+
+            const itemList = document.querySelector('.item-list');
+            items.forEach(item => {
+                itemList.innerHTML += `
+            <div class="item" data-item-id="${item.id}">
+                <img src="${item.image}" alt="${item.name}">
+                <div class="item-info">
+                    <h3>${item.name}</h3>
+                    <p>${item.description}</p>
+                    <p>Preço: ${item.price} Ouros</p>
+                    <button onclick="addToCart(${item.id})">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        `;
+            });
+        });
+
+        function addToCart(itemId) {
+            console.log('Adicionando ao carrinho:', itemId);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

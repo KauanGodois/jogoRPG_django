@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Progresso - Jogo RPG Medieval</title>
+    <link rel="stylesheet" href="{% static 'css/tela_progresso.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="">Home</a>
+        <a href="">Personagem</a>
+        <a href="">Combate</a>
+        <a href="">Inventário</a>
+        <a href="">Missões</a>
+        <a href="">Progresso</a>
+    </div>
+
+    <div class="progress-container">
+        <h1>Progresso do Jogo</h1>
+        
+        <div class="enemies defeated">
+            <h2>Inimigos Derrotados</h2>
+            <div class="enemy-grid">
+                {% for inimigo in inimigos_derrotados %}
+                <div class="enemy-card">
+                    {% if inimigo.imagem %}
+                    <img src="{{ inimigo.imagem.url }}" alt="{{ inimigo.nome }}">
+                    {% else %}
+                    <img src="{% static 'imagens/enemy-image.png' %}" alt="{{ inimigo.nome }}">
+                    {% endif %}
+                    <h3>{{ inimigo.nome }}</h3>
+                    <p>{{ inimigo.descricao }}</p>
+                    <p><strong>Recompensas:</strong> {{ inimigo.recompensas_ouro }} ouro, {{ inimigo.recompensas_exp }} EXP</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="enemies upcoming">
+            <h2>Próximos Inimigos</h2>
+            <div class="enemy-grid">
+                {% for inimigo in proximos_inimigos %}
+                <div class="enemy-card">
+                    {% if inimigo.imagem %}
+                    <img src="{{ inimigo.imagem.url }}" alt="{{ inimigo.nome }}">
+                    {% else %}
+                    <img src="{% static 'img/default_enemy.jpg' %}" alt="{{ inimigo.nome }}">
+                    {% endif %}
+                    <h3>{{ inimigo.nome }}</h3>
+                    <p>{{ inimigo.descricao }}</p>
+                    <p><strong>Recompensas:</strong> {{ inimigo.recompensas_ouro }} ouro, {{ inimigo.recompensas_exp }} EXP</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

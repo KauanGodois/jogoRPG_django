@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MedievalSharp', cursive; /* Fonte com tema medieval */
+}
+
+body {
+    background-image: url('parchment-texture.jpg'); /* Caminho do seu background */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #F4E9E2; /* Cor do texto */
+}
+
+.character-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.8); /* Fundo translúcido */
+    padding: 20px;
+    border-radius: 15px;
+    border: 5px solid #DAA520; /* Borda dourada */
+    box-shadow: 0 0 20px #DAA520; /* Sombra externa */
+}
+
+.profile-card, .stats-card, .equipment-card, .abilities-card {
+    background: rgba(255, 255, 255, 0.1); /* Fundo translúcido para os cards */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    flex-basis: 45%; /* Ajuste de largura base */
+    box-shadow: 0 0 15px #DAA520; /* Sombra interna para destaque */
+    transition: transform 0.3s ease;
+}
+
+.profile-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+h2, h3 {
+    color: #DAA520; /* Cor dos títulos */
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+    border-bottom: 1px solid #DAA520; /* Sublinhado de itens */
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 20px;
+    background: #666;
+    border-radius: 10px;
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.health-bar::after, .mana-bar::aft er {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+.health-bar::after {
+    background: #f00;
+    width: 100%;
+}
+
+.mana-bar::after {
+    background: #00f;
+    width: 50%;
+}
+
+.attribute {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 220px;
+    background-color: #423D0F;
+    color: #FFF;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.attribute:hover .tooltip {
+    visibility: visible;
+}

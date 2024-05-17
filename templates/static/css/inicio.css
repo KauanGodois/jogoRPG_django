@@ -1,0 +1,62 @@
+/* Reset básico para remover margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MedievalSharp', cursive; /* Fonte medieval para todo o texto */
+}
+
+body {
+    color: #F4E9E2; /* Cor creme para o texto, suave aos olhos */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Fundo mais escuro para melhor contraste */
+    border-radius: 15px;
+    border: 5px solid #DAA520; /* Borda dourada */
+    box-shadow: 0 0 10px #DAA520; /* Sombra suave para efeito de elevação */
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000; /* Sombra no texto para destacá-lo */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #DAA520; /* Cor dourada para links */
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s; /* Adicionando transformação para o hover */
+}
+
+nav ul li a:hover {
+    color: #FFFACD;
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+nav ul li i {
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    color: #FFFACD;
+    font-size: 0.8em;
+}
+

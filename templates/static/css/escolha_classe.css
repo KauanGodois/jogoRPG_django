@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MedievalSharp', cursive; /* Fonte medieval para todo o texto */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #F4E9E2;
+}
+
+.class-container {
+    width: 85%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra externa para profundidade */
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.class-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.class-item {
+    width: 30%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.class-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Efeito de elevação ao passar o mouse */
+}
+
+.class-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.class-item:hover img {
+    opacity: 0.9; /* Suaviza a imagem ao passar o mouse */
+}
+
+.class-info {
+    background: rgba(255, 255, 255, 0.1); /* Fundo para informações da classe */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -5px;
+}
+
+.attributes {
+    display: flex;
+    list-style-type: none;
+    padding: 5px;
+    font-size: 0.85em;
+    gap: 5px;
+}
+
+p{
+    margin-bottom: 5px;
+}
+
+.attributes li {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+}

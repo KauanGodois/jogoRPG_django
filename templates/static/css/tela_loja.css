@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MedievalSharp', cursive; /* Fonte medieval para todo o texto */
+}
+
+body {
+    background-image: url('shop-background.jpg');
+    background-size: cover;
+    color: #DAA520;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.shop-container {
+    width: 90%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+    text-align: center;
+    flex-direction: row;
+}
+
+h1 {
+    color: #FFF;
+    margin-bottom: 30px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.category-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.category-button:hover {
+    transform: translateY(-3px);
+    background: #A0522D;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;  /* Ajuste a largura conforme necessário */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-3px);
+}
+
+.item img {
+    width: 100%;
+    max-width: 100px;  /* Reduza o tamanho máximo da imagem */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.item-info {
+    text-align: center;
+}
+
+.item h3, .item p {
+    margin-bottom: 5px;
+    color: #DAA520;
+}
+
+.item button {
+    padding: 8px 16px;
+    font-size: 0.8em;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item button:hover {
+    background-color: #A0522D;
+}
+
+
+.cart {
+    background: rgba(20, 20, 20, 0.8);  /* Escurece o fundo para melhor contraste */
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;  /* Ajuste conforme necessário para a largura ideal */
+    margin: 20px auto 0;  /* Centraliza e adiciona espaço superior */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  /* Sombra suave para efeito de profundidade */
+}
+
+ul {
+    list-style-type: none;  /* Remove marcadores de lista */
+    padding: 0;
+    margin: 10px 0;  /* Espaço antes e depois da lista */
+    text-align: left;
+}
+
+li {
+    padding: 8px;
+    margin-bottom: 5px;
+    background: rgba(255, 255, 255, 0.1);  /* Fundo translúcido para itens */
+    border-radius: 5px;  /* Borda arredondada */
+    color: #FFF;  /* Texto branco */
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: rgba(255, 255, 255, 0.2);  /* Efeito ao passar o mouse */
+}
+
+.checkout-button, .category-button, .command-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4A752C;  /* Cor de fundo padrão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.checkout-button:hover, .category-button:hover, .command-button:hover {
+    background-color: #5B8C35;  /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05);  /* Efeito de crescimento ao passar o mouse */
+}
+
+.checkout-button {
+    width: 90%;  /* Botão de checkout ocupa toda a largura da cesta */
+    font-weight: bold;  /* Texto em negrito */
+    margin-top: 20px;  /* Espaço acima do botão */
+}
+

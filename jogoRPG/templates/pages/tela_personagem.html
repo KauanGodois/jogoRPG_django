@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Personagem - Jogo RPG Medieval</title>
+    <link rel="stylesheet" href="{% static 'css/tela_personagem.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("{% static 'imagens/parchment-texture.jpg' %}");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="character-container">
+        <section class="profile-card">
+            <img src="{{ classe.imagem_url.url }}" alt="Imagem do Personagem">
+            <h2>Nome do Personagem</h2>
+        </section>
+        <section class="stats-card">
+            <h3>Status</h3>
+            <div class="attribute">
+                <img src="{% static 'imagens/icons/health-icon.png' %}" alt="Vida" class="icon">
+                <p>Vida: <span class="health">{{ classe.vida }}</span></p>
+                <div class="progress-bar health-bar"></div>
+                <span class="tooltip">A Vida total do personagem, importante para a sobrevivência em combate.</span>
+            </div>
+            <div class="attribute">
+                <img src="{% static 'imagens/icons/mana-icon.png' %}" alt="Mana" class="icon">
+                <p>Mana: <span class="mana">50</span></p>
+                <div class="progress-bar mana-bar"></div>
+                <span class="tooltip">Mana usada para habilidades mágicas e feitiços.</span>
+            </div>
+            <div class="attribute">
+                <img src="strength-icon.png" alt="Força" class="icon">
+                <p>Dano: 20</p>
+                <span class="tooltip">Determina o dano físico causado em ataques.</span>
+            </div>
+            <div class="attribute">
+                <img src="agility-icon.png" alt="Agilidade" class="icon">
+                <p>Armadura: 15</p>
+                <span class="tooltip">Influencia a velocidade e a capacidade de esquiva do personagem.</span>
+            </div>
+            <!-- <div class="attribute">
+                <img src="intelligence-icon.png" alt="Inteligência" class="icon">
+                <p>Inteligência: 25</p>
+                <span class="tooltip">Aumenta a eficácia das habilidades mágicas e a regeneração de mana.</span>
+            </div> -->
+        </section>
+        <section class="equipment-card">
+            <h3>Equipamentos</h3>
+            <ul>
+                <li>Espada Longa</li>
+                <li>Escudo de Ferro</li>
+                <li>Armadura de Couro</li>
+                <li>Botas de Velocidade</li>
+            </ul>
+        </section>
+        <section class="abilities-card">
+            <h3>Habilidades</h3>
+            <ul>
+                <li>Ataque Rápido</li>
+                <li>Defesa Sólida</li>
+                <li>Magia de Fogo</li>
+                <li>Cura</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

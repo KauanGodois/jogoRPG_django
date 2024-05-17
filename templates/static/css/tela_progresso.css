@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MedievalSharp', sans-serif;
+}
+
+body {
+    background-image: url('epic-battle-background.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+
+.navbar {
+    background-image: url('textura-navbar.jpg');
+    /* Gradiente para um visual mais dinâmico */
+    opacity: 1;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 85%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    /* Sombra para um efeito de profundidade */
+    display: flex;
+    justify-content: center;
+    /* Centraliza os elementos da navbar horizontalmente */
+    align-items: center;
+    /* Centraliza os elementos da navbar verticalmente */
+    padding: 10px 0;
+    /* Espaçamento vertical para a navbar */
+    border-radius: 10px;
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s, background-color 0.3s;
+    /* Transição suave para hover */
+    margin: 12px 38px;
+    ;
+    /* Espaçamento horizontal entre os links */
+}
+
+.navbar a:hover {
+    transform: scale(1.10);
+    transition: .7s;
+}
+
+.progress-container {
+    width: 80%;
+    margin-top: 20%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.progress-container h1,
+h2 {
+    text-align: center;
+}
+
+.enemies {
+    margin-top: 20px;
+}
+
+.enemies.upcoming {
+    margin-top: 20px;
+}
+
+.enemies ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.enemies li {
+    background: #444;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.enemy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.enemy-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.enemy-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.enemy-card h3 {
+    margin-top: 10px;
+}
+
+.enemy-card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #333;
+}
+

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo RPG Medieval</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <style>
+        body {
+            background-image: url("{% static 'imagens/background-castle.jpg' %}");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Castle Survival</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'escolha_classe' %}"><i class="fas fa-play-circle"></i> Iniciar Jogo</a></li>
+                <li><a href="#options"><i class="fas fa-cog"></i> Opções</a></li>
+                <li><a href="#exit"><i class="fas fa-door-open"></i> Sair</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <p>© 2024 Estúdio de Jogos Fantasia. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>

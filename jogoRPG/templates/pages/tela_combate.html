@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Combate Dinâmica - Jogo RPG Medieval</title>
+    <link rel="stylesheet" href="tela_combate.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="personagem.html">Personagem</a>
+        <a href="combate.html">Combate</a>
+        <a href="inventario.html">Inventário</a>
+        <a href="missao.html">Missões</a>
+    </div>
+
+    <!-- Conteúdo da página aqui -->
+
+        <div class="combat-container">
+            <h1>Combate</h1>
+            <div class="combat-view">
+                <div class="combatant hero">
+                    <img src="guerreiro.jpg" alt="Herói">
+                    <div class="class-info">
+                        <div class="status-bar hero-health">
+                            <div class="status-fill">Vida: 120</div>
+                        </div>
+                        <div class="status-bar hero-mana">
+                            <div class="status-fill">Mana: 80</div>
+                        </div>
+                        <ul class="attributes">
+                            <li>Força: 90</li>
+                            <li>Defesa: 80</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="combatant enemy">
+                    <img src="enemy-image.png" alt="Inimigo">
+                    <div class="status-bar enemy-health">
+                        <div class="status-fill">Vida: 100</div>
+                    </div>
+                    <div class="status-bar enemy-mana">
+                        <div class="status-fill">Mana: 50</div>
+                    </div>
+                    <div class="attributes">
+                        <p>Poder: 25</p>
+                        <p>Defesa: 10</p>
+                    </div>
+                </div>
+            </div>
+            <div class="command-panel">
+                <button class="command">Atacar</button>
+                <button class="command">Magia</button>
+                <button class="command">Ataque Rápido</button>
+                <button class="command">Ataque Forte</button>
+                <button class="command">Ataque Mágico</button>
+                <button class="command">Itens</button>
+                <button class="command">Fugir</button>
+            </div>
+        </div>
+    
+</body>
+</html>

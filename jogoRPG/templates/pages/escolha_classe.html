@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de Classe - Jogo RPG Medieval</title>
+    <link rel="stylesheet" href="{% static 'css/escolha_classe.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("{% static 'imagens/medieval-castle-background.jpg' %}");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="class-container">
+        <h1>Escolha Sua Classe</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <label for="nome">Nome do Jogador:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="class-list">
+                {% for classe in classes %}
+                <div class="class-item" onclick="selectClass('{{ classe.id }}')">
+                    <img src="{{ classe.imagem_url.url }}" alt="{{ classe.nome }}">
+                    <div class="class-info">
+                        <h2>{{ classe.nome }}</h2>
+                        <p>{{ classe.descricao }}</p>
+                        <p><strong>Habilidade Especial:</strong> {{ classe.habilidade_especial }}</p>
+                        <ul class="attributes">
+                            <li>Vida: {{ classe.vida }}</li>
+                            <li>Dano: {{classe.dano }}</li>
+                            <li>Armadura: {{ classe.armadura }}</li>
+                            <li>Nível: {{ classe.nivel }}</li>
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+    </div>
+
+    <script>
+        function selectClass(classeId) {
+            window.location.href = '/personagem/' + classeId;
+            // Adicione lógica para manipular a classe selecionada aqui
+        }
+    </script>
+</body>
+
+</html>
